@@ -30,7 +30,7 @@ QUERY getUser(user_name: String) =>
 ##### Deploy HelixQL queries
 
 ```bash
-$ helixql deploy --local
+$ helix deploy --local
 ```
 
 ### Using TypeScript with HelixDB
