@@ -1,5 +1,5 @@
 export interface HelixDBClient {
-    port: number;
+    url: string;
     /**
      * Query the HelixDB API
      * @param endpoint - The endpoint to query

@@ -1,7 +1,8 @@
 import HelixDB from "helix-ts";
 
 // Create a new HelixDB client 
-// The default port is 6969
+// The default url is http://localhost:6969
+// EXAMPLE: const client = new HelixDB("https://xxxxxxxxxx.execute-api.us-west-1.amazonaws.com/v1");
 const client = new HelixDB();
 
 // Query the database

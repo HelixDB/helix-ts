@@ -1,13 +1,20 @@
 import { HelixDBClient, HelixDBInput, HelixDBResponse } from "./types";
 
 class HelixDB implements HelixDBClient {
-    port: number;
-    constructor(port: number = 6969) {
-        this.port = port;
+    url: string;
+
+    /**
+     * Create a new HelixDB client
+     * @param url - The url of the HelixDB server
+     * 
+     * (default: `https://localhost:6969`)
+     */
+    constructor(url: string = "https://localhost:6969") {
+        this.url = url;
     }
 
     async query(endpoint: string, data: HelixDBInput): Promise<HelixDBResponse> {
-        const response = await fetch(`http://localhost:${this.port}/${endpoint}`, {
+        const response = await fetch(`${this.url}/${endpoint}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
