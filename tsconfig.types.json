@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./tsconfig.json",
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "strict": false,
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "noEmit": false,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "outDir": "dist/types",
+    "forceConsistentCasingInFileNames": true
+  }
+}
