@@ -2,14 +2,14 @@
   "name": "helix-ts",
   "version": "1.0.4",
   "description": "TypeScript Library for working with HelixDB",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && tsc",
+    "build": "npm run build:js && npm run build:types",
+    "build:js": "tsup",
+    "build:types": "tsc --project tsconfig.types.json",
     "test": "jest",
     "prepare": "npm run build"
   },
@@ -17,6 +17,22 @@
     "helixdb",
     "typescript"
   ],
+  "homepage": "https://www.helix-db.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aymericzip/helix-ts.git"
+  },
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "require": "./dist/cjs/index.cjs",
+      "import": "./dist/esm/index.mjs"
+    }
+  },
   "author": "HelixDB",
   "license": "MIT",
   "devDependencies": {
@@ -24,6 +40,7 @@
     "jest": "^29.0.0",
     "rimraf": "^5.0.10",
     "ts-jest": "^29.0.0",
+    "tsup": "^8.5.0",
     "typescript": "^5.0.0"
   }
 }
