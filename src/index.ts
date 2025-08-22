@@ -21,7 +21,7 @@ class HelixDB implements HelixDBClient {
    *
    * (default: `https://localhost:6969`)
    */
-  constructor(url: string = "https://localhost:6969") {
+  constructor(url: string = "http://localhost:6969") {
     this.url = url;
   }
 
