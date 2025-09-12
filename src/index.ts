@@ -19,7 +19,7 @@ class HelixDB implements HelixDBClient {
    * Create a new HelixDB client
    * @param url - The url of the HelixDB server
    *
-   * (default: `https://localhost:6969`)
+   * (default: `http://localhost:6969`)
    */
   constructor(url: string = "http://localhost:6969") {
     this.url = url;

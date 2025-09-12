@@ -1,6 +1,6 @@
 {
   "name": "helix-ts",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "TypeScript Library for working with HelixDB",
   "files": [
     "dist"
@@ -20,7 +20,7 @@
   "homepage": "https://www.helix-db.com/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aymericzip/helix-ts.git"
+    "url": "git+https://github.com/HelixDB/helix-ts.git"
   },
   "main": "./dist/cjs/index.cjs",
   "module": "./dist/esm/index.mjs",
