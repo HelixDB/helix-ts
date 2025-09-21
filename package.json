@@ -1,6 +1,6 @@
 {
   "name": "helix-ts",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "TypeScript Library for working with HelixDB",
   "files": [
     "dist"
